@@ -1,5 +1,5 @@
 import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import type { ElementType, ReactNode } from "react";
 
 const variants: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -21,7 +21,7 @@ export function Reveal({ children, delay = 0, className = "" }: { children: Reac
   );
 }
 
-export function RevealText({ text, className = "", as: As = "h2" }: { text: string; className?: string; as?: keyof JSX.IntrinsicElements }) {
+export function RevealText({ text, className = "", as: As = "h2" }: { text: string; className?: string; as?: ElementType }) {
   const words = text.split(" ");
   const Tag: any = As;
   return (
