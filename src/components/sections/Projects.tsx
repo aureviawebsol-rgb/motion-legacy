@@ -93,7 +93,7 @@ function ProjectCard({ project }: { project: Project }) {
     if (!r) return;
     const x = (e.clientX - r.left) / r.width - 0.5;
     const y = (e.clientY - r.top) / r.height - 0.5;
-    setTilt({ rx: -y * 8, ry: x * 10 });
+    setTilt({ rx: -y * 4, ry: x * 5 });
   };
   const reset = () => setTilt({ rx: 0, ry: 0 });
 
