@@ -33,7 +33,7 @@ export function Skills() {
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {CLUSTERS.map((c, ci) => (
             <Reveal key={c.title} delay={ci * 0.06}>
-              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-surface p-7 transition-colors hover:border-gold/30">
+              <div className="group relative overflow-hidden rounded-3xl border border-foreground/10 bg-surface p-7 transition-colors hover:border-gold/30">
                 <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gold/5 blur-3xl transition-opacity duration-700 group-hover:bg-gold/15" />
                 <div className="text-[11px] uppercase tracking-[0.3em] text-gold">{c.title}</div>
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -45,7 +45,7 @@ export function Skills() {
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.04, duration: 0.5 }}
                       whileHover={{ y: -3, scale: 1.04 }}
-                      className="cursor-default rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-foreground/90"
+                      className="cursor-default rounded-full border border-foreground/10 bg-foreground/[0.03] px-3.5 py-1.5 text-xs text-foreground/90"
                       data-cursor="hover"
                     >
                       {item}

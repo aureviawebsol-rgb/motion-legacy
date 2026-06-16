@@ -69,7 +69,7 @@ export function Nav() {
           </a>
 
           <button
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/10 md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-foreground/10 md:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
           >
@@ -92,7 +92,7 @@ export function Nav() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                  className="rounded-xl px-4 py-3 text-sm uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
                 >
                   {l.label}
                 </a>

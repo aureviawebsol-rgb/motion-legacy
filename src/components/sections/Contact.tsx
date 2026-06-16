@@ -36,7 +36,7 @@ export function Contact() {
           </div>
         </Reveal>
 
-        <div className="mt-20 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/5 md:grid-cols-3">
+        <div className="mt-20 grid gap-px overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/5 md:grid-cols-3">
           {LINKS.map((l) => (
             <a
               key={l.label}
@@ -60,7 +60,7 @@ export function Contact() {
           ))}
         </div>
 
-        <div className="mt-24 flex flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-[11px] uppercase tracking-[0.25em] text-muted-foreground sm:flex-row sm:items-center">
+        <div className="mt-24 flex flex-col items-start justify-between gap-4 border-t border-foreground/5 pt-8 text-[11px] uppercase tracking-[0.25em] text-muted-foreground sm:flex-row sm:items-center">
           <div>© {new Date().getFullYear()} Kartik Goyal</div>
           <div>Crafted with patience. India.</div>
         </div>

@@ -36,7 +36,7 @@ export function About() {
             </Reveal>
 
             <Reveal delay={0.3}>
-              <div className="mt-12 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+              <div className="mt-12 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/5">
                 {[
                   { k: "2026", v: "Graduating" },
                   { k: "20+", v: "Projects shipped" },
@@ -52,15 +52,15 @@ export function About() {
           </div>
 
           <div className="relative">
-            <div className="absolute left-[19px] top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-white/15 to-transparent" />
+            <div className="absolute left-[19px] top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-foreground/15 to-transparent" />
             <ul className="space-y-8">
               {POINTS.map((p, i) => (
                 <Reveal key={p.title} delay={i * 0.08}>
                   <li className="group relative flex gap-5">
-                    <div className="relative z-10 mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-surface transition-colors group-hover:border-gold/60">
+                    <div className="relative z-10 mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border border-foreground/10 bg-surface transition-colors group-hover:border-gold/60">
                       <p.icon className="h-4 w-4 text-gold" />
                     </div>
-                    <div className="min-w-0 flex-1 rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition-all duration-500 group-hover:border-white/15 group-hover:bg-white/[0.04]">
+                    <div className="min-w-0 flex-1 rounded-2xl border border-foreground/5 bg-foreground/[0.02] p-5 transition-all duration-500 group-hover:border-foreground/15 group-hover:bg-foreground/[0.04]">
                       <div className="text-sm font-medium uppercase tracking-[0.18em] text-foreground">{p.title}</div>
                       <div className="mt-1.5 text-sm text-muted-foreground">{p.body}</div>
                     </div>

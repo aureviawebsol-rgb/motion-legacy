@@ -50,7 +50,7 @@ export function Experience() {
         />
 
         <div ref={ref} className="relative mt-20 max-w-3xl">
-          <div className="absolute left-[11px] top-0 h-full w-px bg-white/10" />
+          <div className="absolute left-[11px] top-0 h-full w-px bg-foreground/10" />
           <motion.div
             style={{ height: lineHeight }}
             className="absolute left-[11px] top-0 w-px bg-gradient-to-b from-gold via-gold/60 to-transparent"

@@ -105,7 +105,7 @@ function ProjectCard({ project }: { project: Project }) {
       style={{ transformPerspective: 1200 }}
       animate={{ rotateX: tilt.rx, rotateY: tilt.ry }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-surface"
+      className="group relative overflow-hidden rounded-3xl border border-foreground/10 bg-surface"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
@@ -115,7 +115,7 @@ function ProjectCard({ project }: { project: Project }) {
           className="h-full w-full object-cover opacity-90 transition-all duration-[1200ms] ease-out group-hover:scale-[1.06]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent opacity-90" />
-        <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground backdrop-blur">
+        <div className="absolute left-4 top-4 rounded-full border border-foreground/15 bg-foreground/80 text-background px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground backdrop-blur">
           {project.year}
         </div>
       </div>
@@ -129,13 +129,13 @@ function ProjectCard({ project }: { project: Project }) {
 
         <div className="mt-5 flex flex-wrap gap-1.5">
           {project.tags.map((t) => (
-            <span key={t} className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+            <span key={t} className="rounded-full border border-foreground/10 bg-foreground/[0.03] px-2.5 py-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
               {t}
             </span>
           ))}
         </div>
 
-        <div className="mt-6 flex items-center gap-3 border-t border-white/5 pt-5">
+        <div className="mt-6 flex items-center gap-3 border-t border-foreground/5 pt-5">
           <a
             href={project.demo}
             target="_blank"
@@ -145,7 +145,7 @@ function ProjectCard({ project }: { project: Project }) {
           >
             Live demo <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
-          <span className="text-white/20">/</span>
+          <span className="text-foreground/30">/</span>
           <a
             href={project.github}
             target="_blank"
