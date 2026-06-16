@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Reveal, RevealText } from "@/components/Reveal";
 
 const CLUSTERS = [
@@ -30,26 +29,22 @@ export function Skills() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 overflow-hidden rounded-3xl border border-foreground/10 bg-surface/60">
           {CLUSTERS.map((c, ci) => (
-            <Reveal key={c.title} delay={ci * 0.06}>
-              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-surface p-7 transition-colors hover:border-gold/30">
-                <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gold/5 blur-3xl transition-opacity duration-700 group-hover:bg-gold/15" />
-                <div className="text-[11px] uppercase tracking-[0.3em] text-gold">{c.title}</div>
-                <div className="mt-5 flex flex-wrap gap-2">
+            <Reveal key={c.title} delay={ci * 0.05}>
+              <div className="group grid grid-cols-1 items-baseline gap-2 border-b border-foreground/8 px-6 py-7 transition-colors last:border-b-0 hover:bg-foreground/[0.02] sm:grid-cols-[200px_1fr] sm:px-10">
+                <div className="text-[11px] uppercase tracking-[0.3em] text-gold">
+                  <span className="mr-3 text-muted-foreground/60">0{ci + 1}</span>
+                  {c.title}
+                </div>
+                <div className="flex flex-wrap gap-x-6 gap-y-2 font-display text-lg tracking-tight text-foreground/85 sm:text-xl">
                   {c.items.map((item, i) => (
-                    <motion.span
-                      key={item}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.04, duration: 0.5 }}
-                      whileHover={{ y: -3, scale: 1.04 }}
-                      className="cursor-default rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-foreground/90"
-                      data-cursor="hover"
-                    >
+                    <span key={item} className="relative">
                       {item}
-                    </motion.span>
+                      {i < c.items.length - 1 && (
+                        <span className="ml-6 text-foreground/20">·</span>
+                      )}
+                    </span>
                   ))}
                 </div>
               </div>

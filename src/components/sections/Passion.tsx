@@ -27,17 +27,17 @@ export function Passion() {
 
         <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:gap-8">
           <Reveal>
-            <article className="group relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-surface">
+            <article className="group relative aspect-[4/5] overflow-hidden rounded-3xl border border-foreground/10 bg-surface">
               <img
                 src={watchImg}
                 alt="Mechanical watch movement"
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover opacity-70 transition-all duration-[1200ms] ease-out group-hover:scale-[1.06] group-hover:opacity-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
               <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 opacity-60 mix-blend-screen">
                 <GearSVG className="absolute inset-0 animate-spin-slow text-gold/60" />
-                <GearSVG className="absolute inset-10 animate-spin-reverse text-white/40" teeth={10} />
+                <GearSVG className="absolute inset-10 animate-spin-reverse text-foreground/40" teeth={10} />
               </div>
               <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10">
                 <div className="text-[11px] uppercase tracking-[0.3em] text-gold">Horology</div>
@@ -51,14 +51,14 @@ export function Passion() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <article className="group relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-surface">
+            <article className="group relative aspect-[4/5] overflow-hidden rounded-3xl border border-foreground/10 bg-surface">
               <img
                 src={carImg}
                 alt="Performance car silhouette"
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover opacity-80 blur-[0.5px] transition-all duration-[1200ms] ease-out group-hover:scale-[1.08] group-hover:blur-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
               <div aria-hidden className="absolute inset-0 overflow-hidden">
                 {[12, 28, 46, 64, 82].map((y, i) => (
                   <motion.span

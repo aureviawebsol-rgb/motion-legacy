@@ -34,8 +34,8 @@
   --color-surface: var(--surface);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Inter Tight", ui-serif, Georgia, serif;
 }
 
 :root {
@@ -72,6 +72,37 @@
   --sidebar-ring: oklch(0.79 0.12 88);
 }
 
+:root {
+  --background: oklch(0.985 0.004 240);
+  --foreground: oklch(0.22 0.04 252);
+  --surface: oklch(0.965 0.012 240);
+  --card: oklch(0.98 0.008 240);
+  --card-foreground: oklch(0.22 0.04 252);
+  --popover: oklch(0.98 0.008 240);
+  --popover-foreground: oklch(0.22 0.04 252);
+  --primary: oklch(0.42 0.13 255);
+  --primary-foreground: oklch(0.985 0.004 240);
+  --secondary: oklch(0.94 0.018 245);
+  --secondary-foreground: oklch(0.22 0.04 252);
+  --muted: oklch(0.94 0.01 245);
+  --muted-foreground: oklch(0.50 0.03 250);
+  --accent: oklch(0.42 0.13 255);
+  --accent-foreground: oklch(0.985 0.004 240);
+  --border: oklch(0.22 0.04 252 / 10%);
+  --input: oklch(0.22 0.04 252 / 14%);
+  --ring: oklch(0.42 0.13 255);
+  --gold: oklch(0.42 0.13 255);
+  --gold-soft: oklch(0.42 0.13 255 / 14%);
+  --sidebar: oklch(0.965 0.012 240);
+  --sidebar-foreground: oklch(0.22 0.04 252);
+  --sidebar-primary: oklch(0.42 0.13 255);
+  --sidebar-primary-foreground: oklch(0.985 0.004 240);
+  --sidebar-accent: oklch(0.94 0.018 245);
+  --sidebar-accent-foreground: oklch(0.22 0.04 252);
+  --sidebar-border: oklch(0.22 0.04 252 / 10%);
+  --sidebar-ring: oklch(0.42 0.13 255);
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   body {
@@ -91,9 +122,9 @@
 }
 
 @utility glass {
-  background: color-mix(in oklab, var(--surface) 55%, transparent);
-  backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid color-mix(in oklab, white 8%, transparent);
+  background: color-mix(in oklab, var(--background) 70%, transparent);
+  backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent);
 }
 
 @utility text-balance {
@@ -113,18 +144,18 @@
 
 .animate-spin-slow { animation: spin-slow 30s linear infinite; }
 .animate-spin-reverse { animation: spin-reverse 45s linear infinite; }
-.animate-marquee { animation: marquee 40s linear infinite; }
+.animate-marquee { animation: marquee 60s linear infinite; }
 .animate-float { animation: float-y 6s ease-in-out infinite; }
 
 .text-gold {
-  background: linear-gradient(135deg, #f4e0a3 0%, #d4af37 50%, #a8821b 100%);
+  background: linear-gradient(135deg, #6b8acc 0%, #1b3d8f 50%, #0a1f4d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .hairline {
-  background: linear-gradient(90deg, transparent, color-mix(in oklab, white 22%, transparent), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--foreground) 16%, transparent), transparent);
   height: 1px;
 }
 

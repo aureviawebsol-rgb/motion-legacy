@@ -48,7 +48,7 @@ export function CustomCursor() {
         className="pointer-events-none fixed left-0 top-0 z-[99] -translate-x-1/2 -translate-y-1/2 transition-[border-color,background] duration-300"
       >
         <div
-          className="h-9 w-9 rounded-full border border-white/30"
+          className="h-9 w-9 rounded-full border border-foreground/30"
           style={{ borderColor: hover ? "rgb(212 175 55 / 0.9)" : undefined, background: hover ? "rgb(212 175 55 / 0.06)" : "transparent" }}
         />
       </motion.div>
