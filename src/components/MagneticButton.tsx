@@ -24,8 +24,8 @@ export function MagneticButton({ children, href, onClick, variant = "primary", c
 
   const styles =
     variant === "primary"
-      ? "bg-gold text-primary-foreground hover:shadow-[0_10px_40px_-10px_rgb(212_175_55_/_0.55)]"
-      : "border border-foreground/15 text-foreground hover:border-gold/60";
+      ? "bg-gold text-primary-foreground shadow-[0_10px_30px_-12px_rgb(27_61_143_/_0.45)] hover:shadow-[0_18px_50px_-12px_rgb(27_61_143_/_0.55)]"
+      : "border border-foreground/15 text-foreground hover:border-gold/60 hover:bg-foreground/[0.02]";
 
   const inner = (
     <motion.span
