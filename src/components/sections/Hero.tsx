@@ -138,8 +138,8 @@ function DialSVG({ className = "" }: { className?: string }) {
       {indices.map((label, i) => {
         const a = (i / 12) * 360;
         const rad = (a - 90) * (Math.PI / 180);
-        const x = 50 + Math.cos(rad) * 39;
-        const yy = 50 + Math.sin(rad) * 39 + 1.1;
+        const x = Number((50 + Math.cos(rad) * 39).toFixed(3));
+        const yy = Number((50 + Math.sin(rad) * 39 + 1.1).toFixed(3));
         return (
           <text
             key={i}
