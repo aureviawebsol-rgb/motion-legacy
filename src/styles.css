@@ -144,7 +144,7 @@
 
 .animate-spin-slow { animation: spin-slow 30s linear infinite; }
 .animate-spin-reverse { animation: spin-reverse 45s linear infinite; }
-.animate-marquee { animation: marquee 40s linear infinite; }
+.animate-marquee { animation: marquee 60s linear infinite; }
 .animate-float { animation: float-y 6s ease-in-out infinite; }
 
 .text-gold {

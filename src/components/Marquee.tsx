@@ -18,7 +18,7 @@ export function Marquee() {
     </div>
   );
   return (
-    <div className="relative overflow-hidden border-y border-foreground/5 py-10">
+    <div className="relative overflow-hidden border-y border-foreground/10 py-10 bg-surface/40">
       <div className="flex animate-marquee">
         {Row}
         {Row}

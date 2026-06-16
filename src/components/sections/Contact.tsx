@@ -11,7 +11,7 @@ const LINKS = [
 export function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden py-32 sm:py-40">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.10),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(27,61,143,0.10),transparent_60%)]" />
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
           <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
